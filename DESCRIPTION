@@ -18,4 +18,5 @@ Imports:
     magrittr,
     stats,
     stringr,
-    tidyr
+    tidyr,
+    utils
