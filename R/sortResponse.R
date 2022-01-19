@@ -33,5 +33,5 @@ sortresponse = function(a){
       a = mergecol(a,i)
     }
   }
-  View(a)
+  a
 }
