@@ -1,7 +1,7 @@
 usethis::use_package("utils")
+usethis::use_package("readxl")
 #' Merges all the responses and outputs a dataset
 #'
-#' @param a The input dataset
 #'
 #' @return The data set with merged responses
 #' @export

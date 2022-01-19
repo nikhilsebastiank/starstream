@@ -6,9 +6,6 @@
 \usage{
 sortresponse()
 }
-\arguments{
-\item{a}{The input dataset}
-}
 \value{
 The data set with merged responses
 }
