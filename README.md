@@ -1,4 +1,4 @@
 # starstream
-Remote repository for the R package `starstream`.
+Remote repository for the R package `starstream`, developed and maintained by Nikhil Sebastian.
 
-Developed and maintained by Nikhil Sebastian.
+To make the package available locally, call `devtools::install_github("nikhilsebastiank/starstream")` in the R console and then attach it using `library(starstream)`.
