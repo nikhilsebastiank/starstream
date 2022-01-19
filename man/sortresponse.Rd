@@ -4,7 +4,7 @@
 \alias{sortresponse}
 \title{Merges all the responses and outputs a dataset}
 \usage{
-sortresponse(a)
+sortresponse()
 }
 \arguments{
 \item{a}{The input dataset}
