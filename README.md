@@ -1,4 +1,4 @@
 # starstream
 Remote repository for the R package `starstream`.
 
-Developed and Maintained by Nikhil Sebastian.
+Developed and maintained by Nikhil Sebastian.
