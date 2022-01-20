@@ -11,7 +11,7 @@ sortresponse = function(){
   rawData = readxl::read_xlsx("/Users/nikhilsebastian/Dropbox/Projects/MasterThesis/data/UK_Creators__Earnings_Survey_Raw_Data.xlsx")
   colnames(rawData) = rawData[1,] # Changes the column names based on the answer number
   rawData = rawData[-1,] # Removes the first row (corresponds to column names)
-  rawData[is.na(rawData)] = "0" # missing values coded as 0s
+  rawData[is.na(rawData)] = "n" # missing values coded as ns
 
   # Vectors of column names
   namesA = colnames(rawData[1:40])

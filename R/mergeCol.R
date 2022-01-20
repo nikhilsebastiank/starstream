@@ -19,8 +19,8 @@ mergecol = function(a, b){
   i <- NULL
   a = a %>%
     tidyr::unite(i, dplyr::all_of(c) , sep = "/")
-  a$i = stringr::str_replace_all(a$i, "(/0)*" , "")
-  a$i = stringr::str_replace_all(a$i, "(0/)", "")
+  a$i = stringr::str_replace_all(a$i, "(/n)*" , "")
+  a$i = stringr::str_replace_all(a$i, "(n/)", "")
   index = grep("i",colnames(a))
   colnames(a)[index] = b
   return(a)

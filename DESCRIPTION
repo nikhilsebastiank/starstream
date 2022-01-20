@@ -14,7 +14,9 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
+    cowplot,
     dplyr,
+    ggplot2,
     magrittr,
     readxl,
     stats,
