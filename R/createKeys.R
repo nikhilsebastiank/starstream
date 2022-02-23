@@ -8,7 +8,6 @@ usethis::use_package("readxl")
 #'
 createKeys = function(){
   artistdata = readxl::read_xlsx("data/artistkeys.xlsx")
-  View(artistdata)
   write.csv(artistdata, "data/artistkeysmain.csv", row.names = FALSE)
 
 }
