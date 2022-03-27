@@ -8,6 +8,8 @@ estimatequantiles(yr, workingdir = "~/Dropbox/Projects/MasterThesis")
 }
 \arguments{
 \item{yr}{The year to estimate the quantiles}
+
+\item{workingdir}{The working directory}
 }
 \value{
 Quantiles: 0.01, 0.1, 0.5, 0.9

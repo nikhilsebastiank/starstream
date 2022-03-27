@@ -4,6 +4,7 @@ usethis::use_package("dplyr")
 #' @importFrom utils read.csv
 #' @importFrom magrittr %>%
 #' @param yr The year to estimate the quantiles
+#' @param workingdir The working directory
 #' @return Quantiles: 0.01, 0.1, 0.5, 0.9
 #' @export
 #'
