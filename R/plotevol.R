@@ -1,7 +1,8 @@
 usethis::use_package("ggplot2")
+usethis::use_package("dplyr")
 #' Creates Histogram to Visualize the Evolution of Income
 #' @import ggplot2
-#' @import tidyverse
+#' @import dplyr
 #' @import readxl
 #' @importFrom utils write.csv
 #'
@@ -12,7 +13,7 @@ usethis::use_package("ggplot2")
 
 plotevol = function(workingdir){
   charts = read.csv(paste(workingdir,"/","data/musicid.csv", sep = ""))
-ggplot2::ggplot(data = charts)+
+  ggplot2::ggplot(data = charts)+
   ggplot2::geom_density(data = dplyr::filter(charts, year == '2020'), ggplot2::aes(x = indicativerevenue, color = '2020'))+
   ggplot2::geom_density(data = dplyr::filter(charts, year == '2019'), ggplot2::aes(x = indicativerevenue, color = '2019'))+
   ggplot2::geom_density(data = dplyr::filter(charts, year == '2018'), ggplot2::aes(x = indicativerevenue, color = '2018'))+
@@ -26,3 +27,5 @@ ggplot2::ggplot(data = charts)+
   ggplot2::geom_density(data = dplyr::filter(charts, year == '2010'), ggplot2::aes(x = indicativerevenue, color = '2010'))+
   ggplot2::labs(title = 'Evolution of Income Distribution for Superstars', x = 'Revenue', y = 'Density')
 }
+
+
