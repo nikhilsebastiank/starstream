@@ -1,6 +1,7 @@
 usethis::use_package("dplyr")
 #' Estimates Quantiles of the distribution by year
 #' @import dplyr
+#' @importFrom utils read.csv
 #' @importFrom magrittr %>%
 #' @param yr The year to estimate the quantiles
 #' @return Quantiles: 0.01, 0.1, 0.5, 0.9
