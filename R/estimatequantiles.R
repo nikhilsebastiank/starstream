@@ -8,8 +8,7 @@ usethis::use_package("dplyr")
 #' @export
 #'
 
-estimatequantiles = function(yr){
-  workingdir = "~/Dropbox/Projects/MasterThesis"
+estimatequantiles = function(yr,workingdir = "~/Dropbox/Projects/MasterThesis"){
   charts = read.csv(paste(workingdir,"/","data/musicid.csv", sep = ""))
   mdata = dplyr::filter(charts, year == yr)
 

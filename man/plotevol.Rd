@@ -4,7 +4,7 @@
 \alias{plotevol}
 \title{Creates Histogram to Visualize the Evolution of Income}
 \usage{
-plotevol(workingdir)
+plotevol(workingdir = "~/Dropbox/Projects/MasterThesis")
 }
 \arguments{
 \item{workingdir}{The working directory}

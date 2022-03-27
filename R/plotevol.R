@@ -12,7 +12,7 @@ usethis::use_package("dplyr")
 #' @export
 #'
 
-plotevol = function(workingdir){
+plotevol = function(workingdir = "~/Dropbox/Projects/MasterThesis"){
   charts = read.csv(paste(workingdir,"/","data/musicid.csv", sep = ""))
   ggplot2::ggplot(data = charts)+
   ggplot2::geom_density(data = dplyr::filter(charts, year == '2020'), ggplot2::aes(x = indicativerevenue, color = '2020'))+
