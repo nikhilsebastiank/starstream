@@ -3,6 +3,7 @@ usethis::use_package("dplyr")
 #' Creates Histogram to Visualize the Evolution of Income
 #' @import ggplot2
 #' @import dplyr
+#' @importFrom utils read.csv
 #' @import readxl
 #' @importFrom utils write.csv
 #'
