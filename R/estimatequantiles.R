@@ -30,10 +30,10 @@ estimatequantiles = function(yr,workingdir = "~/Dropbox/Projects/MasterThesis"){
   mdatagroup$tag <- factor(mdatagroup$tag, levels = tags, ordered = FALSE)
 
   a = 20000
-  b = 30000
+  b = 25000
 
   pa = nrow(dplyr::filter(mdatagroup, indicativerevenue < 20000))/100
-  pb = nrow(dplyr::filter(mdatagroup, indicativerevenue < 30000))/100
+  pb = nrow(dplyr::filter(mdatagroup, indicativerevenue < 25000))/100
 
   shape = (log(1-pa) - log(1-pb))/((log(b) - log(a)))
   scale = ((pb-pa)/((1/a^shape)-(1/b^shape)))^(1/shape)
@@ -47,5 +47,6 @@ estimatequantiles = function(yr,workingdir = "~/Dropbox/Projects/MasterThesis"){
   print(paste("Q2 =", q2))
   print(paste("Q3 =", q3))
   print(paste("Q4 =", q4))
-
+  quantilelist = list("q1" = q1, "q2" = q2, "q3" = q3, "q4" = q4)
+  return(quantilelist)
 }
