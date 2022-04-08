@@ -17,6 +17,7 @@ Imports:
     cowplot,
     dplyr,
     ggplot2,
+    lubridate,
     magrittr,
     readxl,
     stats,
