@@ -55,6 +55,6 @@ grammys <- function(datamain,a=52,b=2010){
     a = a+1
     b = b+1
   }
-  grammyawards <- list(awardsfull,nominationsfull)
+  grammyawards <- list("awards"=awardsfull,"nominations"=nominationsfull)
   return(grammyawards)
 }
