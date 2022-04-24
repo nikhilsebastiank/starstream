@@ -4,7 +4,7 @@
 \alias{scrapegrammy}
 \title{Scrapes Grammy data from Wikipedia}
 \usage{
-scrapegrammy()
+scrapegrammy(a, b)
 }
 \value{
 List of all grammy nominations and wins from 2010 - 2020.

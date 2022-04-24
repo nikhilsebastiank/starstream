@@ -2,6 +2,7 @@
 
 export(createKeys)
 export(estimatequantiles)
+export(grammys)
 export(mergecol)
 export(plotDescriptives)
 export(revHist)

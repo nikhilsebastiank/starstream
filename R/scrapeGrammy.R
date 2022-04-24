@@ -9,12 +9,12 @@ usethis::use_package("readr")
 #' @return List of all grammy nominations and wins from 2010 - 2020.
 #' @export
 
-scrapegrammy <- function(){
+scrapegrammy <- function(a,b){
 
   awardsfull = list()
   nominationsfull = list()
 
-  for (i in 42:52){
+  for (i in a:b){
     if (i%%10 == 1){
       j = assign(paste("awards",as.character(i),sep=""),read_html(paste("https://en.wikipedia.org/wiki/",as.character(i),"st","_Annual_Grammy_Awards",sep=""))%>%
                    html_nodes("p+ ul li:nth-child(1) , dl+ ul b")%>%
