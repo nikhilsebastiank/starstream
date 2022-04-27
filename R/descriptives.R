@@ -1,6 +1,8 @@
 #' Descriptives
 #' @import dplyr
 #' @import lubridate
+#' @import tibble
+#' @import stargazer
 #' @return Table 2, descriptive statistics
 #' @export
 #'
