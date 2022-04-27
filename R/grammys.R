@@ -9,8 +9,7 @@ usethis::use_package("lubridate")
 #' @param b The corresponding year of the ceremony
 #' @return Returns a list containing the awards and nominations for each year for upto 10 years - Editable
 #' @export
-#'
-#' @examples grammys(albumchartssub,52,2010)
+
 grammys <- function(datamain,a=52,b=2010){
   albumcharts <- datamain
   grammyfull <- starstream::scrapegrammy(a,a+10)
