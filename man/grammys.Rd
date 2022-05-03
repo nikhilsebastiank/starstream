@@ -21,6 +21,3 @@ Returns a list containing the awards and nominations for each year for upto 10 y
 \description{
 Grammy Wins and Nominations
 }
-\examples{
-grammys(albumchartssub,52,2010)
-}

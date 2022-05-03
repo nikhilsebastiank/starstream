@@ -5,8 +5,7 @@
 #' @import stargazer
 #' @return Table 2, descriptive statistics
 #' @export
-#'
-#' @examples
+
 descriptives <- function(){
   charts <- read.csv("data/musicid.csv")
 

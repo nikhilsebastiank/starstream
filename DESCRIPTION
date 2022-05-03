@@ -22,7 +22,9 @@ Imports:
     readr,
     readxl,
     rvest,
+    stargazer,
     stats,
     stringr,
+    tibble,
     tidyr,
     utils

@@ -5,6 +5,9 @@ usethis::use_package("readr")
 #' @import rvest
 #' @import dplyr
 #' @import readr
+#' @importFrom stats sd
+#' @param a Start year
+#' @param b End year
 #' @importFrom magrittr %>%
 #' @return List of all grammy nominations and wins from 2010 - 2020.
 #' @export

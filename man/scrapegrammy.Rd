@@ -6,6 +6,11 @@
 \usage{
 scrapegrammy(a, b)
 }
+\arguments{
+\item{a}{Start year}
+
+\item{b}{End year}
+}
 \value{
 List of all grammy nominations and wins from 2010 - 2020.
 }
