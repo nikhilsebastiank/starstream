@@ -33,7 +33,7 @@ plotDescriptives = function(workingdir = "~/Dropbox/Projects/MasterThesis", resu
     ggplot2::geom_density(data = dplyr::filter(charts, year == '2010'), ggplot2::aes(x = indicativerevenue, color = '2010'))+
     ggplot2::labs(title = 'Evolution of Income Distribution for Superstars', x = 'Revenue', y = 'Density')
   evolution
-  ggplot2::ggsave(path = results, width = 8, height = 5, device='png', dpi=700, filename = "evolution.png")
+  ggplot2::ggsave(path = results, width = 8, height = 5, device='png', dpi=700, filename = "evolutionDensities.png")
 
   # Convert year type to as.Date:
   charts$year = lubridate::ymd(charts$year, truncated = 2L)
