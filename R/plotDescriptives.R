@@ -77,14 +77,14 @@ plotDescriptives = function(workingdir = "~/Dropbox/Projects/MasterThesis", resu
   # Can possibly do it for quintiles and also for other years maybe.
 
   quantileanalysis <- ggplot2::ggplot(data = medians, aes(year))+
-    ggplot2::geom_point(aes(y = q4, color = "99th Percentile"))+
-    ggplot2::geom_line(aes(y = q4, color = "99th Percentile"))+
+    #ggplot2::geom_point(aes(y = q4, color = "99th Percentile"))+
+    #ggplot2::geom_line(aes(y = q4, color = "99th Percentile"))+
     ggplot2::geom_point(aes(y = q3, color = "90th Percentile"))+
     ggplot2::geom_line(aes(y = q3, color = "90th Percentile"))+
     ggplot2::geom_point(aes(y = q2, color = "10th Percentile"))+
     ggplot2::geom_line(aes(y = q2, color = "10th Percentile"))+
-    ggplot2::geom_point(aes(y = q1, color = "1st Percentile"))+
-    ggplot2::geom_line(aes(y = q1, color = "1st Percentile"))+
+    #ggplot2::geom_point(aes(y = q1, color = "1st Percentile"))+
+    #ggplot2::geom_line(aes(y = q1, color = "1st Percentile"))+
     ggplot2::geom_point(aes(y = median, color = "50th Percentile"))+
     ggplot2::geom_line(aes(y = median, color = "50th Percentile"))+
     ggplot2::labs(title = 'Evolution of Quantiles', x = 'Year', y = 'Quantiles')
