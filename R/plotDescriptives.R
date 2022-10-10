@@ -11,8 +11,8 @@ usethis::use_package("lubridate")
 #' @import readxl
 #' @importFrom utils write.csv
 #' @importFrom magrittr %>%
-#' @param workingdir The working directory
-#' @param results The directory for outputs
+#' @param workingdir Set the working directory
+#' @param results Set the directory for plots
 #' @return Creates and Saves Descriptive Plots for the Income Distributions of Superstars (2010-2020)
 #' @export
 #'
