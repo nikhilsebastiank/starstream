@@ -12,7 +12,7 @@ mergecol(a, b)
 \item{b}{Response number entered as a string}
 }
 \value{
-The data set with merged responses
+The data set with merged responses - UK data (not used in the analysis)
 }
 \description{
 Merge Responses based on Raw Data

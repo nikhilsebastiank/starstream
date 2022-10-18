@@ -1,4 +1,3 @@
-usethis::use_package("dplyr")
 #' Estimates Quantiles of the distribution by year
 #' @import dplyr
 #' @importFrom utils read.csv
@@ -6,11 +5,10 @@ usethis::use_package("dplyr")
 #' @param yr The year to estimate the quantiles
 #' @param workingdir The working directory
 #' @return Quantiles: 0.01, 0.1, 0.5, 0.9
-#' @export
-#'
 
-estimatequantiles = function(yr,workingdir = "~/Dropbox/Projects/MasterThesis"){
-  charts = read.csv(paste(workingdir,"/","data/musicid.csv", sep = ""))
+
+estimatequantiles = function(yr){
+  charts = charts
   mdata = dplyr::filter(charts, year == yr)
 
   tags = c("[0-5000)", "[5000-10000)", "[10000-15000)", "[15000-20000)", "[20000-25000)", "[25000-30000)", "[30000-35000)", "[35000-40000)", "[40000-45000)", "[45000-50000)")

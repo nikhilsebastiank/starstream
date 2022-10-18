@@ -3,11 +3,11 @@
 #' @import lubridate
 #' @import tibble
 #' @import stargazer
-#' @return Table 2, descriptive statistics
+#' @return Table 1, descriptive statistics for Indicative Revenue
 #' @export
 
 descriptives <- function(){
-  charts <- read.csv("data/musicid.csv")
+  charts <- charts
 
   #charts$year = strptime(as.character(charts$year), "%Y")
   #charts$year = year(charts$year)
@@ -28,5 +28,5 @@ descriptives <- function(){
     ) %>%
     dplyr::filter(lubridate::year(year) >= 2010 & lubridate::year(year) <2021, )
 
-  stargazer::stargazer(medians, summary = FALSE, rownames = FALSE, out = "results/graphs/Table2.txt", title = "Descriptive Statistics", digits = 1)
+  stargazer::stargazer(medians, summary = FALSE, rownames = FALSE, digits = 1)
 }

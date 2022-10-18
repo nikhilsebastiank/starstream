@@ -2,7 +2,7 @@
 % Please edit documentation in R/sortResponse.R
 \name{sortresponse}
 \alias{sortresponse}
-\title{Merges all the responses and outputs a dataset}
+\title{Merges all the responses from the UK Music Creators Dataset}
 \usage{
 sortresponse()
 }
@@ -10,5 +10,5 @@ sortresponse()
 The data set with merged responses
 }
 \description{
-Merges all the responses and outputs a dataset
+Merges all the responses from the UK Music Creators Dataset
 }

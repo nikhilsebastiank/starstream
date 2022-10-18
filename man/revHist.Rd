@@ -7,7 +7,7 @@
 revHist()
 }
 \value{
-A subset of the main data containing revenue data
+A subset of the main data containing revenue data (UK Data - not used in the analysis)
 }
 \description{
 Plot Histograms for Earnings for Music Creators

@@ -7,7 +7,7 @@
 descriptives()
 }
 \value{
-Table 2, descriptive statistics
+Table 1, descriptive statistics for Indicative Revenue
 }
 \description{
 Descriptives

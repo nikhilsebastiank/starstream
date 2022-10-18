@@ -1,7 +1,4 @@
-usethis::use_package("ggplot2")
-usethis::use_package("dplyr")
-usethis::use_package("lubridate")
-#' Creates Descriptive Plots
+#' Plot Descriptive graphs
 #' @import ggplot2
 #' @import dplyr
 #' @import lubridate
@@ -11,14 +8,11 @@ usethis::use_package("lubridate")
 #' @import readxl
 #' @importFrom utils write.csv
 #' @importFrom magrittr %>%
-#' @param workingdir Set the working directory
-#' @param results Set the directory for plots
-#' @return Creates and Saves Descriptive Plots for the Income Distributions of Superstars (2010-2020)
+#' @return Creates Descriptive Plots for the Income Distributions of Superstars (2010-2020)
 #' @export
-#'
 
-plotDescriptives = function(workingdir = "~/Dropbox/Projects/MasterThesis", results = paste(workingdir, "/results/graphs", sep = "")){
-  charts = read.csv(paste(workingdir,"/","data/musicid.csv", sep = ""))
+plotDescriptives = function(){
+  charts = charts
   evolution <- ggplot2::ggplot(data = charts)+
     ggplot2::geom_density(data = dplyr::filter(charts, year == '2020'), ggplot2::aes(x = indicativerevenue, color = '2020'))+
     ggplot2::geom_density(data = dplyr::filter(charts, year == '2019'), ggplot2::aes(x = indicativerevenue, color = '2019'))+
@@ -33,7 +27,7 @@ plotDescriptives = function(workingdir = "~/Dropbox/Projects/MasterThesis", resu
     ggplot2::geom_density(data = dplyr::filter(charts, year == '2010'), ggplot2::aes(x = indicativerevenue, color = '2010'))+
     ggplot2::labs(title = 'Evolution of Income Distribution for Superstars', x = 'Revenue', y = 'Density')
   evolution
-  ggplot2::ggsave(path = results, width = 8, height = 5, device='png', dpi=700, filename = "evolutionDensities.png")
+  #ggplot2::ggsave(path = results, width = 8, height = 5, device='png', dpi=700, filename = "evolutionDensities.png")
 
   # Convert year type to as.Date:
   charts$year = lubridate::ymd(charts$year, truncated = 2L)
@@ -62,7 +56,7 @@ plotDescriptives = function(workingdir = "~/Dropbox/Projects/MasterThesis", resu
     ggplot2::geom_line()+
     ggplot2::labs(title = 'Median Incomes for Superstars', x = 'Year', y = 'Median')
   medianincomes
-  ggplot2::ggsave(path = results, width = 8, height = 5, device='png', dpi=700, filename = "medianincomes.png")
+  #ggplot2::ggsave(path = results, width = 8, height = 5, device='png', dpi=700, filename = "medianincomes.png")
 
   # Mean to Median Ratio
 
@@ -71,7 +65,7 @@ plotDescriptives = function(workingdir = "~/Dropbox/Projects/MasterThesis", resu
     ggplot2::geom_line()+
     ggplot2::labs(title = 'Mean To Median Ratio for Superstars', x = 'Year', y = 'Mean to Median Ratio')
   meanToMedianRatio
-  ggplot2::ggsave(path = results, width = 8, height = 5, device='png', dpi=700, filename = "meanToMedian.png")
+  #ggplot2::ggsave(path = results, width = 8, height = 5, device='png', dpi=700, filename = "meanToMedian.png")
 
   # Qunatile Analysis Over Time:
   # Can possibly do it for quintiles and also for other years maybe.
@@ -89,7 +83,7 @@ plotDescriptives = function(workingdir = "~/Dropbox/Projects/MasterThesis", resu
     ggplot2::geom_line(aes(y = median, color = "50th Percentile"))+
     ggplot2::labs(title = 'Evolution of Quantiles', x = 'Year', y = 'Quantiles')
   quantileanalysis
-  ggplot2::ggsave(path = results, width = 8, height = 5, device='png', dpi=700, filename = "quantiles.png")
+  #ggplot2::ggsave(path = results, width = 8, height = 5, device='png', dpi=700, filename = "quantiles.png")
 
   # Income ratios:
 
@@ -102,7 +96,7 @@ plotDescriptives = function(workingdir = "~/Dropbox/Projects/MasterThesis", resu
     ggplot2::geom_line(aes(y = fiftyToTen, color = "50-10"))+
     ggplot2::labs(title = 'Income Ratios for Superstars', x = 'Revenue', y = 'Density')
   incomeratios
-  ggplot2::ggsave(path = results, width = 8, height = 5, device='png', dpi=700, filename = "incomeratios.png")
+  #ggplot2::ggsave(path = results, width = 8, height = 5, device='png', dpi=700, filename = "incomeratios.png")
   plotlist = list(Evolution = evolution, MedianIncomes = medianincomes, MeanMedian = meanToMedianRatio, Quantiles = quantileanalysis, IncomeRatios = incomeratios)
   return(plotlist)
 }

@@ -1,17 +1,10 @@
-usethis::use_package("stringr")
-usethis::use_package("dplyr")
-usethis::use_package("stats")
-usethis::use_package("tidyr")
-usethis::use_package("magrittr")
-
 #' Merge Responses based on Raw Data
 #' @importFrom magrittr %>%
 #' @param a An input dataset
 #' @param b Response number entered as a string
 #'
-#' @return The data set with merged responses
-#' @export
-#'
+#' @return The data set with merged responses - UK data (not used in the analysis)
+
 mergecol = function(a, b){
 
   c = stringr::str_extract(colnames(a), stringr::str_c("(",b,").","*"))

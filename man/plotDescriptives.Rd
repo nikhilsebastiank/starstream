@@ -2,21 +2,13 @@
 % Please edit documentation in R/plotDescriptives.R
 \name{plotDescriptives}
 \alias{plotDescriptives}
-\title{Creates Descriptive Plots}
+\title{Plot Descriptive graphs}
 \usage{
-plotDescriptives(
-  workingdir = "~/Dropbox/Projects/MasterThesis",
-  results = paste(workingdir, "/results/graphs", sep = "")
-)
-}
-\arguments{
-\item{workingdir}{The working directory}
-
-\item{results}{The directory for outputs}
+plotDescriptives()
 }
 \value{
-Creates and Saves Descriptive Plots for the Income Distributions of Superstars (2010-2020)
+Creates Descriptive Plots for the Income Distributions of Superstars (2010-2020)
 }
 \description{
-Creates Descriptive Plots
+Plot Descriptive graphs
 }

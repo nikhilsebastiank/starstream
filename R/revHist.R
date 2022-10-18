@@ -1,12 +1,11 @@
-usethis::use_package("cowplot")
-usethis::use_package("ggplot2")
 #' Plot Histograms for Earnings for Music Creators
 #' @importFrom magrittr %>%
 #' @import dplyr
 #' @import stringr
 #' @import ggplot2
-#' @return A subset of the main data containing revenue data
-#' @export
+#' @return A subset of the main data containing revenue data (UK Data - not used in the analysis)
+
+
 revHist = function(){
   Creators = sortresponse() # Loads the sorted responses
   B8 <- NULL

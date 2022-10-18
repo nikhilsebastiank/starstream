@@ -4,7 +4,7 @@
 \alias{estimatequantiles}
 \title{Estimates Quantiles of the distribution by year}
 \usage{
-estimatequantiles(yr, workingdir = "~/Dropbox/Projects/MasterThesis")
+estimatequantiles(yr)
 }
 \arguments{
 \item{yr}{The year to estimate the quantiles}

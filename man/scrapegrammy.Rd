@@ -4,12 +4,10 @@
 \alias{scrapegrammy}
 \title{Scrapes Grammy data from Wikipedia}
 \usage{
-scrapegrammy(a, b)
+scrapegrammy(a = 52)
 }
 \arguments{
-\item{a}{Start year}
-
-\item{b}{End year}
+\item{a}{Ceremony number}
 }
 \value{
 List of all grammy nominations and wins from 2010 - 2020.

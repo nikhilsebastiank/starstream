@@ -1,23 +1,21 @@
-usethis::use_package("dplyr")
-usethis::use_package("lubridate")
 #' Grammy Wins and Nominations
 #' @importFrom magrittr %>%
 #' @import lubridate
 #' @import dplyr
 #' @param datamain - The dataset used
-#' @param a The Number of the Grammy Ceremony, For example 52 for 52nd Grammy
+#' @param a The Number of the Grammy Ceremony, For example 52 for 52nd Grammy Ceremony
 #' @param b The corresponding year of the ceremony
 #' @return Returns a list containing the awards and nominations for each year for upto 10 years - Editable
 #' @export
 
-grammys <- function(datamain,a=52,b=2010){
+grammys <- function(datamain = charts,a=52,b=2010){
   albumcharts <- datamain
   grammyfull <- starstream::scrapegrammy(a,a+10)
 
   albumchartsByYear <- dplyr::select(albumcharts, year, artist)%>%
     group_by(year)
 
-  albumchartsByYear$year <- as.Date(albumchartsByYear$year)
+  albumchartsByYear$year <- as.Date(albumchartsByYear$year, origin = "2000-01-01")
 
   albumchartslist = list()
   for (i in b:(b+10)){

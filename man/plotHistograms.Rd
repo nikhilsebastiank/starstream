@@ -2,21 +2,13 @@
 % Please edit documentation in R/plotHistograms.R
 \name{plotHistograms}
 \alias{plotHistograms}
-\title{Plot Histograms}
+\title{Plot Histograms for Indicative Revenue}
 \usage{
-plotHistograms(
-  workingdir = "~/Dropbox/Projects/MasterThesis",
-  results = paste(workingdir, "/results/graphs", sep = "")
-)
-}
-\arguments{
-\item{workingdir}{The working directory}
-
-\item{results}{The directory for outputs}
+plotHistograms()
 }
 \value{
-Histograms with Indicative Revenue on the Horizontal Axis
+Histograms with Indicative Revenue on the Horizontal Axis (Appendix)
 }
 \description{
-Plot Histograms
+Plot Histograms for Indicative Revenue
 }

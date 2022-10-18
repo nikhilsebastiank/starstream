@@ -4,14 +4,14 @@
 \alias{grammys}
 \title{Grammy Wins and Nominations}
 \usage{
-grammys(datamain, a = 52, b = 2010)
+grammys(datamain = charts, a = 52, b = 2010)
 }
 \arguments{
 \item{datamain}{\itemize{
 \item The dataset used
 }}
 
-\item{a}{The Number of the Grammy Ceremony, For example 52 for 52nd Grammy}
+\item{a}{The Number of the Grammy Ceremony, For example 52 for 52nd Grammy Ceremony}
 
 \item{b}{The corresponding year of the ceremony}
 }

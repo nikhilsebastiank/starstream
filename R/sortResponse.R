@@ -1,10 +1,5 @@
-usethis::use_package("utils")
-usethis::use_package("readxl")
-#' Merges all the responses and outputs a dataset
-#'
-#'
+#' Merges all the responses from the UK Music Creators Dataset
 #' @return The data set with merged responses
-#' @export
 #' @importFrom stats na.omit
 #' @importFrom utils View
 sortresponse = function(){
