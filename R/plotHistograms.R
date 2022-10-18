@@ -3,7 +3,7 @@
 #' @export
 
 plotHistograms = function(){
-  charts = charts
+  charts = chartssmall
   hist2020 <- ggplot2::ggplot(data = charts) + ggplot2::geom_histogram(data = dplyr::filter(charts, year == '2020'), ggplot2::aes(x = indicativerevenue), bins = 15) + ggplot2::labs(x = "Indicative Revenue", y = "Frequency") + ggplot2::ylim(0,60) + ggplot2::xlim(0,60000)
   hist2019 <- ggplot2::ggplot(data = charts) + ggplot2::geom_histogram(data = dplyr::filter(charts, year == '2019'), ggplot2::aes(x = indicativerevenue), bins = 15) + ggplot2::labs(x = "Indicative Revenue", y = "Frequency") + ggplot2::ylim(0,60) + ggplot2::xlim(0,60000)
   hist2018 <- ggplot2::ggplot(data = charts) + ggplot2::geom_histogram(data = dplyr::filter(charts, year == '2018'), ggplot2::aes(x = indicativerevenue), bins = 15) + ggplot2::labs(x = "Indicative Revenue", y = "Frequency") + ggplot2::ylim(0,60) + ggplot2::xlim(0,60000)

@@ -12,7 +12,7 @@
 #' @export
 
 plotDescriptives = function(){
-  charts = charts
+  charts = chartssmall
   evolution <- ggplot2::ggplot(data = charts)+
     ggplot2::geom_density(data = dplyr::filter(charts, year == '2020'), ggplot2::aes(x = indicativerevenue, color = '2020'))+
     ggplot2::geom_density(data = dplyr::filter(charts, year == '2019'), ggplot2::aes(x = indicativerevenue, color = '2019'))+

@@ -7,7 +7,7 @@
 #' @export
 
 descriptives <- function(){
-  charts <- charts
+  charts <- chartssmall
 
   #charts$year = strptime(as.character(charts$year), "%Y")
   #charts$year = year(charts$year)
