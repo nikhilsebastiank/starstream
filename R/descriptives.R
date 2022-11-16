@@ -1,4 +1,10 @@
-#' Descriptives
+#' Create Table of Descriptive Statistics
+#'
+#'
+#' `descriptives()` returns a table of descriptive statistics of IR for superstar musicians,
+#' for the period 2010-2020.
+#'
+#'
 #' @import dplyr
 #' @import lubridate
 #' @import tibble
@@ -14,6 +20,7 @@ descriptives <- function(){
 
 
   charts$year = lubridate::ymd(charts$year, truncated = 2L)
+  #charts$year = format(charts$year, format = "%Y")
 
   medians <- charts %>%
     group_by(year) %>%
@@ -26,7 +33,8 @@ descriptives <- function(){
       range = round((max - min),2),
       IQrange = round((unname(quantile(indicativerevenue,0.75)) - unname(quantile(indicativerevenue,0.25))),2)
     ) %>%
-    dplyr::filter(lubridate::year(year) >= 2010 & lubridate::year(year) <2021, )
+    dplyr::filter(lubridate::year(year) >= 2010 & lubridate::year(year) <2021, )%>%
+    dplyr::mutate(year = format(year, format = "%Y"))
 
   stargazer::stargazer(medians, summary = FALSE, rownames = FALSE, digits = 1)
 }
